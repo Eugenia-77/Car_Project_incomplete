@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home Cars</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>REV It with Edem</title>
+      <style>
+        body {
+          margin: 0;
+          font-family: 'Segoe UI', sans-serif;
+          background-image: url(images/black\ car\ garage.jpeg);
+          color: #f0f0f0;
+        }
+    
+        /* Top Bar */
+        .top-bar {
+          background-color: #232323;
+          text-align: center;
+          padding: 0.6rem 1rem;
+          font-size: 0.95rem;
+        }
+        .top-bar a {
+          color: #e63946;
+          text-decoration: underline;
+          margin-left: 0.5rem;
+        }
+    
+        /* Header */
+        header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 1rem 2rem;
+          background-color: #1b1b1b;
+          border-bottom: 1px solid #333;
+        }
+        .logo {
+          font-size: 1.8rem;
+          font-weight: bold;
+        }
+        nav a {
+          color: #f0f0f0;
+          margin: 0 1rem;
+          text-decoration: none;
+          font-weight: 500;
+        }
+        nav a:hover {
+          color: #e63946;
+        }
+    
+        /* Hero Section */
+        .hero {
+          background: url('https://images.unsplash.com/photo-1617531653534-c525a0fc3e91') no-repeat center center/cover;
+          height: 90vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          padding: 2rem;
+        }
+        .hero h1 {
+          font-size: 2.8rem;
+          max-width: 800px;
+          margin-bottom: 1.5rem;
+        }
+        .hero .cta {
+          display: flex;
+          gap: 1rem;
+        }
+        .hero .cta button {
+          padding: 0.8rem 1.6rem;
+          border: none;
+          border-radius: 30px;
+          font-weight: bold;
+          cursor: pointer;
+          background-color: #e63946;
+          color: white;
+          transition: background 0.3s;
+        }
+        .hero .cta button:hover {
+          background-color: #ff4757;
+        }
+    
+        /* Section Layout */
+        section {
+          padding: 4rem 2rem;
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+        .section-title {
+          font-size: 2rem;
+          margin-bottom: 2rem;
+          border-bottom: 3px solid #e63946;
+          display: inline-block;
+          padding-bottom: 0.5rem;
+        }
+    
+        .grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 2rem;
+          margin-top: 2rem;
+        }
+    
+        .card {
+          background-image: url(images/the\ brake\ pads_.jpeg);
+          padding: 1.2rem;
+          border-radius: 12px;
+          transition: transform 0.3s;
+        }
+        .card:hover {
+          transform: translateY(-5px);
+        }
+    
+        .card img {
+          width: 100%;
+          border-radius: 10px;
+          margin-bottom: 1rem;
+        }
+    
+        .stars {
+          color: gold;
+          margin-top: 0.5rem;
+        }
+        .card button {
+          margin-top: 1rem;
+          padding: 0.5rem 1rem;
+          background: #e63946;
+          color: white;
+          border: none;
+          border-radius: 20px;
+          cursor: pointer;
+          font-weight: bold;
+        }
+        .card button:hover {
+          background: #ff4757;
+        }
+    
+        /* Email Section */
+        .email-bar {
+          background-image: url(images/background\ email.jpeg);
+          text-align: center;
+          padding: 2rem;
+          font-size: 1.2rem;
+          margin-top: 4rem;
+          border-top: 1px solid #333;
+        }
+
+       
+        /* About Section */
+        .about {
+          text-align: center;
+          padding: 4rem 2rem;
+          background-image:url(images/Black.jpeg) ;
+          color: black;
+        }
+        .about img {
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;
+          margin-bottom: 1.5rem;
+          object-fit: cover;
+        }
+    
+        /* Responsive */
+        @media (max-width: 768px) {
+          .hero h1 {
+            font-size: 2rem;
+          }
+          nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+          }
+        }
+        footer{
+          text-align: center;
+        }
+         
+        .email-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  background-image: url(images/background\ email.jpeg);
+}
+
+.email-form input {
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  border: none;
+  width: 280px;
+  max-width: 100%;
+  font-size: 1rem;
+}
+
+.email-form button {
+  padding: 0.8rem 1.4rem;
+  background-color: #e63946;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.email-form button:hover {
+  background-color: #ff4757;
+}
+
+footer{
+  background-color: #333;
+}
+
+      </style>
+    </head>
+    <body>
+    
+      <!-- Top Bar -->
+      <div class="top-bar">
+        Subscribe for weekly car tips 🔥 or <a href="#">Book a 1-on-1 consult</a>
+      </div>
+    
+      <!-- Header -->
+      <header>
+        <div class="logo">🔧 REV It with Edem</div>
+        <nav>
+          <a href="Car.Project.html">Home</a>
+          <a href="learn.html">Learn</a>
+          <a href="tool.html">Tools</a>
+          <a href="#">Mods</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </header>
+    
+      <!-- Hero Section -->
+      <section class="hero">
+        <h1>Wrench Your Car. One Mod, Fix, or Tip at a Time.</h1>
+        <div class="cta">
+          <button>Start Learning</button>
+          <button>Get Tool Guide</button>
+        </div>
+      </section>
+    
+      <!-- Tutorials -->
+      <section>
+        <div class="section-title">🛠️ Tutorials</div>
+        <div class="grid">
+          <div class="card">
+            <strong>How to Change Brake Pads (Even If You’ve Never Tried)</strong>
+            <iframe width="350" height="400" 
+          src="https://www.youtube.com/embed/x2rTxWx-LfQ"
+          title="How To Change Replace Brake Pads Easy Simple"
+          frameborder="0" allow="accelerometer; autoplay;
+          clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>       
+          </div>
+          <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="Oil Change Tutorial">
+            <strong>Simple Oil Change: DIY in 20 Minutes</strong>
+          </div>
+        </div>
+      </section>
+    
+      <!-- Tool Reviews -->
+<section>
+  <div class="section-title">🔍 Tool Reviews</div>
+  <div class="grid">
+    
+    <!-- Impact Wrench Review Part -->
+    <div class="card">
+      <img src="images/DEWALT.jpeg" width="250" height="400" alt="Impact Wrench">
+      <strong>DEWALT 20V Max Cordless Impact Wrench</strong>
+      <p>Blast off lug nuts and rusted bolts fast with high
+         torque and long battery life.</p>
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <button onclick="window.open
+      ('https://www.amazon.com/dp/B00BWFIKZO','_blank')">
+      Buy Now</button>
+    </div>
+
+    <!-- Jack Stand Review Part -->
+    <div class="card">
+      <img src="images/Jack Stands 2 tons.jpeg" width="250"
+       height="400" alt="Jack Stands">
+      <strong>Torin Big Red Steel Jack Stands (2 Ton)</strong>
+      <p>Essential safety gear for lifting and holding your car 
+        up securely while you work.</p>
+      <div class="stars">⭐⭐⭐⭐☆</div>
+      <button onclick="window.open
+      ('https://www.amazon.com/dp/B00026Z3DQ','_blank')">
+      Buy Now</button>
+    </div>
+
+    <!-- OBD2 Scanner Review Part-->
+    <div class="card">
+      <img src="images/Ancel AD310 OBD2.jpeg" width="250"
+      height="400" alt="OBD2 Scanner">
+      <strong>Ancel AD310 OBD2 Scanner</strong>
+      <p>Quickly diagnose engine issues and clear codes with this
+        easy plug-and-play scanner.</p>
+      <div class="stars">⭐⭐⭐⭐☆</div>
+      <button onclick="window.open
+      ('https://www.amazon.com/dp/B01G5EA74I','_blank')">
+      Buy Now</button>
+    </div>
+
+  </div>
+</section>
+
+    
+      <!-- Car Care Tips -->
+      <section>
+        <div class="section-title">✨ Car Care Tips</div>
+        <div class="grid">
+          <div class="card">
+            <strong>10-Minute Details That Matter</strong>
+            <iframe width="400" height="560" src="https://www.youtube.com/embed/FuEtE4mBVgY"
+            title="is DAWN dish SOAP better than your wheel cleaner??" frameborder="0" allow="accelerometer; 
+            autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy=
+            "strict-origin-when-cross-origin" allowfullscreen></iframe><br><br>   
+            <a href="more.10mins.">Click here for more tips..</a>         
+          </div>
+          <div class="card">
+            <strong>Quick Interior Vacuum Hack</strong>
+            <iframe width="400" height="560" src="https://www.youtube.com/embed/vwg0JEOLB_k" 
+            title="Detailing NASTY Work Truck in 60 SECONDS! 🚘💕 #ASMR #Satisfying #Detailing 
+            #CarCleaning #DetailDane" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+            encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin
+            -when-cross-origin" allowfullscreen></iframe><br><br> 
+            <a href="more.vacuum">Click here for more tips..</a>
+          </div>
+        </div>
+      </section>
+    
+      <!-- Popular Mods Part -->
+<section>
+  <div class="section-title">🔥 Popular Mods</div>
+  <div class="grid">
+    <div class="card">
+      <img src="images/Ford Ranger.jpeg" alt="Cold Air Intake Mod">
+      <strong>Cold Air Intake Upgrade</strong>
+      <p>Boost engine response and power with this easy bolt-on mod.</p>
+    </div>
+    <div class="card">
+      <img src="images/Ford LED.jpeg" alt="LED Headlight Mod">
+      <strong>LED Headlight Conversion</strong>
+      <p>Upgrade your visibility and modernize your ride’s look.</p>
+    </div>
+    <div class="card">
+      <img src="images/Lamborghini Aventador LP780-4 Ultimae - performance.jpeg" 
+      width="350" height="180" alt="Exhaust Tip Mod">
+      <strong>Performance Exhaust Tip</strong>
+      <p>Improve exhaust style and sound affordably.</p>
+    </div>
+    <div class="card">
+      <img src="images/Tinted Maserati.jpeg" alt="Window Tint Mod">
+      <strong>Legal Window Tint</strong>
+      <p>Protects your interior and adds a sleek aesthetic.</p>
+    </div>
+  </div>
+</section>
+
+    
+      <!-- The Email Part -->
+      <section class="email-bar">
+        <p>Join 1,000+ car lovers learning how to fix, mod, and care for their ride.</p>
+        <form>
+          <input type="email" placeholder="Enter your email" required style="padding: 0.6rem;
+          border-radius: 6px; border: none; margin-top: 1rem; width: 250px;">
+          <button type="submit" style="padding: 0.6rem 1.2rem; background-color:
+          #e63946; border: none; border-radius: 6px; color: white; font-weight:
+          bold; cursor: pointer; margin-left: 0.5rem;">Subscribe
+          </button>
+        </form>
+      </section>
+    
+      <!-- The About Section -->
+      <section class="about">
+        <h2><a href="aboutme.html">👤 About Edem</a></h2>
+        <p>Built for car lovers who learn by doing. Grease, mistakes, success — now I'm sharing the journey with you.</p>
+      </section>
+    
+
+      <footer>
+      <p>
+        <h6>© 2025 REV It with Edem — Empowering drivers with real-world car knowledge and DIY confidence.</h6>
+      </p>
+    </footer>
+
+  </body>
+</html>
